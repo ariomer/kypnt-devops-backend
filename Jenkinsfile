@@ -10,9 +10,9 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube-container') {
                     // Optionally use a Maven environment you've configured already
-                    withMaven(maven:'Maven 3.5') {
+                    // withMaven(maven:'Maven 3.5') {
                         sh 'mvn clean package -DskipTests sonar:sonar'
-                    }
+                    
                 }
             }
         }
